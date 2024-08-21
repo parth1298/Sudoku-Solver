@@ -1,0 +1,197 @@
+/* Body Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(115, 206, 243);
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 20px solid black; /* Outer border */
+}
+
+td {
+    border: 1px solid black;
+    width: 40px; /* Increased width */
+    height: 40px; /* Increased height */
+    text-align: center;
+    position: relative;
+}
+
+td:nth-child(3n+1) {
+    border-left: 5px solid black; /* Left border of each 3x3 grid */
+}
+
+td:nth-child(3n) {
+    border-right: 5px solid black; /* Right border of each 3x3 grid */
+}
+
+tr:nth-child(3n+1) td {
+    border-top: 5px solid black; /* Top border of each 3x3 grid */
+}
+
+tr:nth-child(3n) td {
+    border-bottom: 5px solid black; /* Bottom border of each 3x3 grid */
+}
+
+input {
+    width: 38px; /* Adjust width */
+    height: 38px; /* Adjust height */
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    background-color: yellow;
+}
+
+/* Button Styles */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    animation: blink 1s infinite;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes blink {
+    0% { background-color: lightblue; }
+    50% { background-color: lightgreen; }
+    100% { background-color: lightblue; }
+}
+
+/* Message Styles */
+#message {
+    margin-top: 10px;
+    font-size: 18px;
+    color: red;
+}
+
+/* Heading Styles */
+.heading {
+    font-family: 'Lobster', cursive, 'Pacifico', cursive;
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cloud-like container for heading */
+.cloud {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+}
+
+.cloud:before,
+.cloud:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 100px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.heading-cloud {
+    padding: 20px 40px;
+    margin-top: 60px; /* Adjusted margin to position heading lower */
+    position: relative;
+    top: -50px; /* Adjusted to move the heading cloud up */
+}
+
+.heading-cloud:before {
+    top: -30px;
+    left: 20%;
+}
+
+.heading-cloud:after {
+    top: -30px;
+    right: 20%;
+}
+
+/* Additional clouds */
+.cloud1,
+.cloud2,
+.cloud3 {
+    width: 150px;
+    height: 80px;
+}
+
+.cloud1 {
+    top: 10%;
+    left: 10%;
+}
+
+.cloud2 {
+    top: 40%;
+    right: 10%;
+}
+
+.cloud3 {
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cloud1:before,
+.cloud1:after,
+.cloud2:before,
+.cloud2:after,
+.cloud3:before,
+.cloud3:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 60px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.cloud1:before {
+    top: -20px;
+    left: 20px;
+}
+
+.cloud1:after {
+    top: -20px;
+    right: 20px;
+}
+
+.cloud2:before {
+    top: -20px;
+    left: 20px;
+}
+
+.cloud2:after {
+    top: -20px;
+    right: 20px;
+}
+
+.cloud3:before {
+    top: -20px;
+    left: 20px;
+}
+
+.cloud3:after {
+    top: -20px;
+    right: 20px;
+}
+
+/* Invalid Input Styles */
+.invalid-input {
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+}
